@@ -8,6 +8,8 @@ This project is hosted on [Github](https://github.com/UBC-MDS/DSCI_522_blei7_geo
 
 Version `v0.1` of this project can be found [here](https://github.com/UBC-MDS/DSCI_522_blei7_georgejjw_coco/releases/tag/v0.1).
 
+Version `v1.0` of this project can be found [here](https://github.com/UBC-MDS/DSCI_522_blei7_georgejjw_coco/releases/tag/v1.0).
+
 ### Dataset
 
 Chocolate bar ratings data was sourced from [Kaggle](https://www.kaggle.com/rtatman/chocolate-bar-ratings) under the [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) license.
@@ -19,6 +21,8 @@ There are eight feature columns in the data set, which includes: company name, c
 There is one target column in the data set, which is expert rating. Each chocolate bar was rated using a 5-point scale, such that 1 is unpleasant, 2 is disappointing, 3 is satisfactory (3.75 is praiseworthy), 4 is premium, and 5 is elite.
 
 For a detailed description of the data set, please see [Kaggle](https://www.kaggle.com/rtatman/chocolate-bar-ratings/home).
+
+To load the data set, navigate to the `src/` folder of this project repository, and run the command `Rscript load_data.R` in the terminal. The first 6 rows of the data set should then be displayed.
 
 ### Question of interest
 
