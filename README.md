@@ -6,6 +6,8 @@ This project analyzes expert ratings of over 1,700 chocolate bars.
 
 This project is hosted on [Github](https://github.com/UBC-MDS/DSCI_522_blei7_georgejjw_coco.git).
 
+Version `v0.1` of this project can be found [here](https://github.com/UBC-MDS/DSCI_522_blei7_georgejjw_coco/releases/tag/v0.1).
+
 ### Dataset
 
 Chocolate bar ratings data was sourced from [Kaggle](https://www.kaggle.com/rtatman/chocolate-bar-ratings) under the [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) license.
