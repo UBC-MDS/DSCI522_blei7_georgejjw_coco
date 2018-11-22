@@ -22,6 +22,10 @@ There is one target column in the data set, which is expert rating. Each chocola
 
 For a detailed description of the data set, please see [Kaggle](https://www.kaggle.com/rtatman/chocolate-bar-ratings/home).
 
+Here is an example of what will you see upon executing the script.
+
+![](https://i.gyazo.com/d7a0427b49b7edb4308986e2108a1ba7.png)
+
 To load the data set, navigate to the `src/` folder of this project repository, and run the command `Rscript load_data.R` in the terminal. The first 6 rows of the data set should then be displayed.
 
 ### Question of interest
