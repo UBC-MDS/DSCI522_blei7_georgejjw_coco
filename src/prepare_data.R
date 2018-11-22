@@ -23,8 +23,8 @@ main <- function() {
   # load data
   suppressMessages(coco <- read_csv(input))
 
-  # replace white space in column names with "."
-  names(coco) <- gsub("\\s", "_", names(coco))
+  # replace white space in column names with "_"
+  names(coco) <- gsub("[[:space:]]+", "_", names(coco))
 
   # subset data
   coco <- coco[-1, ] %>% # remove first row due to duplicated column names
