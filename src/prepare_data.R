@@ -23,15 +23,17 @@ main <- function() {
   # load data
   suppressMessages(coco <- read_csv(input))
   
+  # replace white space in column names with "."
+  names(coco) <- gsub("\\s", "_", names(coco))
+  
   # subset data
   coco <- coco[-1, ] %>% # remove first row due to duplicated column names
-    rename_all(make.names) %>%  # replace white space in column names with "."
-    select(Cocoa.Percent, Rating)
+    select(Cocoa_Percent, Rating)
   
   # correct data type
   coco <- coco %>% 
     mutate(
-      darkness = parse_number(Cocoa.Percent) / 100,
+      darkness = parse_number(Cocoa_Percent) / 100,
       rating = parse_number(Rating)) %>% 
     select(darkness, rating)
   
