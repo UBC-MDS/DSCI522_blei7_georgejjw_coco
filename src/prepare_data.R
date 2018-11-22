@@ -25,7 +25,7 @@ main <- function() {
   
   # subset data
   coco <- coco[-1, ] %>% # remove first row due to duplicated column names
-    rename_all(make.names) %>%  # replace white space in column names with "."
+    rename_all( ~ make.names(.x)) %>%  # replace white space in column names with "."
     select(Cocoa.Percent, Rating)
   
   # correct data type
