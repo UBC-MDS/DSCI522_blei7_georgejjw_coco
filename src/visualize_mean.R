@@ -7,7 +7,7 @@
 # This script takes two arguments - a path or filename by which to load the data, 
 # and a path or filename by which to save the dot plot.
 
-# Usage: Rscript visualize_scatter.R ../data/cleaned_coco.csv ../results/mean_darkness_rating.jpg
+# Usage: Rscript visualize_mean.R ../data/cleaned_coco.csv ../results/mean_darkness_rating.jpg
 
 # load libraries
 suppressPackageStartupMessages(library(tidyverse))

@@ -1,9 +1,11 @@
 ---
-title: "Chocolate bar rating analysis"
-author: "Bailey Lei, George J. J. Wu"
-date: "November, 2018"
+title: "Chocolate bar ratings analysis"
 output: github_document
 ---
+
+Contributors: Bailey Lei, George J. J. Wu
+
+Date: November, 2018
 
 ```{r echo = FALSE}
 suppressPackageStartupMessages(library(tidyverse))
@@ -120,9 +122,9 @@ As suggested by `Figure 4.`, high quality chocolate bars seemed to have lower co
 
 We would be testing the following null and alternative hypothesis:
 
-$H_0$: The mean chocolate darkness (cocoa percentage) of the high quality chocolate is _no different_ than that of the low quality chocolate.
+H0: The mean chocolate darkness (cocoa percentage) of the high quality chocolate is _no different_ than that of the low quality chocolate.
 
-$H_A$: The mean chocolate darkness (cocoa percentage) of the high quality chocolate is _different_ than that of the low quality chocolate. 
+HA: The mean chocolate darkness (cocoa percentage) of the high quality chocolate is _different_ than that of the low quality chocolate. 
 
 *Table 4.* Welch's t-test and its p-value
 

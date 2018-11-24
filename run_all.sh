@@ -26,4 +26,5 @@ Rscript src/compute_pearson.R data/cleaned_coco.csv results/cor_pearson.csv
 # conduct t-test
 Rscript src/compute_ttest.R data/cleaned_coco.csv results/ttest.csv
 
-# make report
+# generate final report
+Rscript -e 'rmarkdown::render("src/generate_report.Rmd", output_file = "final_report.md", output_dir = "doc")' 
