@@ -37,6 +37,9 @@ Or you can simply executing this shell script at the root of this project:
 ```
 bash run_all.sh
 ```
+Here is a flowchart depicting the relationships among the scripts.
+
+![](https://i.imgur.com/7Kmpy1U.jpg)
 
 ### Report
 
