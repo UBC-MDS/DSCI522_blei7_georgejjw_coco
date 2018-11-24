@@ -18,7 +18,7 @@ For a detailed description of the data set, please see [Kaggle](https://www.kagg
 
 1. Clone and navigate to the root of this project.
 
-2. In your terminal, execute scripts in the following order:
+2. In your terminal, execute commands in the following order:
 
 ```
 Rscript src/prepare_data.R data/flavors_of_cacao.csv data/cleaned_coco.csv
@@ -32,7 +32,7 @@ Rscript src/compute_pearson.R data/cleaned_coco.csv results/cor_pearson.csv
 Rscript src/compute_ttest.R data/cleaned_coco.csv results/ttest.csv
 Rscript -e 'rmarkdown::render("src/generate_report.Rmd", output_file = "final_report.md", output_dir = "doc")' 
 ```
-Or you can simply executing this shell script at the root of this project:
+Or you can simply execute this shell script at the root of this project:
 
 ```
 bash run_all.sh
