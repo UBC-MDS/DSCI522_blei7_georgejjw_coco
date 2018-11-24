@@ -26,13 +26,14 @@ main <- function() {
   # visualize scatter plot between darkness and rating
   coco %>% ggplot(aes(y = rating, x = darkness)) +
     geom_point(size = 0.8) +
+    geom_smooth(method = "lm") +
     xlab("Chocolate darkness (cocoa percentage)") + 
     ylab("Expert ratings") +
-    ggtitle("Chocolate darkness and expert ratings") +
-    theme_minimal()
+    theme_minimal() +
+    theme(axis.title = element_text(size = 8))
   
   # save figure
-  suppressMessages(ggsave(output))
+  suppressMessages(ggsave(output, width = 6, height = 3.5))
   print("Scatterplot of darkness and ratings successfully saved.")
   
 }

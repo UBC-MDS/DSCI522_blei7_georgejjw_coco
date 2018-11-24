@@ -29,11 +29,11 @@ main <- function() {
     scale_x_continuous(breaks = seq(0, 5, by = 0.5)) +
     xlab("Chocolate ratings") +
     ylab("Frequency") +
-    ggtitle("Distribution of chocolate ratings") +
-    theme_minimal()
+    theme_minimal() +
+    theme(axis.title = element_text(size = 8))
   
   # save figure
-  suppressMessages(ggsave(output))
+  suppressMessages(ggsave(output, width = 6, height = 2.5))
   print("Distribution of chocolate ratings successfully saved.")
 
 }

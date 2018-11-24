@@ -28,11 +28,11 @@ main <- function() {
     geom_histogram(bins = 40) +
     xlab("Chocolate darkness (cocoa percentage)") +
     ylab("Frequency") +
-    ggtitle("Distribution of chocolate darkness") +
-    theme_minimal()
+    theme_minimal() +
+    theme(axis.title = element_text(size = 8))
  
   # save figure
-  suppressMessages(ggsave(output))
+  suppressMessages(ggsave(output, width = 6, height = 2.5))
   print("Distribution of chocolate darkness successfully saved.")
 
 }
