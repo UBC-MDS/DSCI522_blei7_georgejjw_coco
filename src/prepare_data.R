@@ -1,12 +1,12 @@
 #! /usr/bin/env Rscript
 # prepare_data.R
 # Bailey Lei, George J. J. Wu, Nov 2018
-#
+
 # This script loads a data file, prepares the data, and outputs
 # a cleaned version of the data file. This script takes two arguments -
 # a path or filename by which to load the data, and another path or filename
 # by which to save the cleaned data.
-#
+
 # Usage: Rscript prepare_data.R ../data/flavors_of_cacao.csv ../data/cleaned_coco.csv
 
 # load libraries
@@ -39,7 +39,7 @@ main <- function() {
 
   # save cleaned data
   coco %>% write_csv(output)
-  print("File successfully saved.")
+  print("Cleaned data successfully saved.")
 
 }
 
