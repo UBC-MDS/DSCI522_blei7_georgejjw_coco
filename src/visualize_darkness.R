@@ -32,7 +32,7 @@ main <- function() {
     theme(axis.title = element_text(size = 8))
  
   # save figure
-  suppressMessages(ggsave(output, width = 6, height = 2.5))
+  suppressMessages(ggsave(output, width = 5, height = 2.5))
   print("Distribution of chocolate darkness successfully saved.")
 
 }

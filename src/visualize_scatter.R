@@ -33,7 +33,7 @@ main <- function() {
     theme(axis.title = element_text(size = 8))
   
   # save figure
-  suppressMessages(ggsave(output, width = 6, height = 3.5))
+  suppressMessages(ggsave(output, width = 5, height = 3.5))
   print("Scatterplot of darkness and ratings successfully saved.")
   
 }
