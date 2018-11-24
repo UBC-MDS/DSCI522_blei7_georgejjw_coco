@@ -30,7 +30,7 @@ First, we examined the chocolate darkness variable visually.
 
 ```{r echo = FALSE, message = FALSE}
 # visualize distribution of chocolate darkness
-include_graphics(here("results/darkness_dist.jpg"))
+include_graphics("../results/darkness_dist.jpg")
 ```
 
 *Figure 1.* Distribution of chocolate darkness.
@@ -41,7 +41,7 @@ We also examined chocolate darkness numerically.
 
 ```{r echo = FALSE, message = FALSE}
 # descriptive stats of chocolate darkness
-darkness_stats <- read_csv(here("results/darkness_stats.csv"))
+darkness_stats <- read_csv("../results/darkness_stats.csv")
 kable(darkness_stats)
 ```
 
@@ -55,7 +55,7 @@ Next, we examined chocolate expert ratings visually.
 
 ```{r echo = FALSE, message = FALSE}
 # visualize distribution of chocolate ratings
-include_graphics(here("results/rating_dist.jpg"))
+include_graphics("../results/rating_dist.jpg")
 ```
 
 *Figure 2.* Distribution of chocolate expert ratings.
@@ -84,7 +84,7 @@ First, we explored the two variables assuming that their relationship is linear.
 
 ```{r echo = FALSE, message = FALSE}
 # visualize darkness and rating
-include_graphics(here("results/scatter_darkness_rating.jpg"))
+include_graphics("../results/scatter_darkness_rating.jpg")
 ```
 
 *Figure 3.* Chocolate darkness and expert ratings. Grey section represents 95% confidence intervals for the line of best fit (blue line).
@@ -99,7 +99,7 @@ kable(cor_pearson)
 
 
 
-#### Limitations and future studies
+#### Limitations and future directions
 
 #### References
 

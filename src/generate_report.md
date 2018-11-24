@@ -31,10 +31,9 @@ We began our analysis by examining each variable individually.
 
 #### Chocolate darkness
 
-First, we examined the chocolate darkness variable
-visually.
+First, we examined the chocolate darkness variable visually.
 
-![](/home/jj/mds/d522/DSCI_522_blei7_georgejjw_coco/results/darkness_dist.jpg)<!-- -->
+![](../results/darkness_dist.jpg)<!-- -->
 
 *Figure 1.* Distribution of chocolate darkness.
 
@@ -58,10 +57,9 @@ somewhat normal.
 
 #### Chocolate expert ratings
 
-Next, we examined chocolate expert ratings
-visually.
+Next, we examined chocolate expert ratings visually.
 
-![](/home/jj/mds/d522/DSCI_522_blei7_georgejjw_coco/results/rating_dist.jpg)<!-- -->
+![](../results/rating_dist.jpg)<!-- -->
 
 *Figure 2.* Distribution of chocolate expert ratings.
 
@@ -96,7 +94,7 @@ ratings.
 First, we explored the two variables assuming that their relationship is
 linear.
 
-![](/home/jj/mds/d522/DSCI_522_blei7_georgejjw_coco/results/scatter_darkness_rating.jpg)<!-- -->
+![](../results/scatter_darkness_rating.jpg)<!-- -->
 
 *Figure 3.* Chocolate darkness and expert ratings. Grey section
 represents 95% confidence intervals for the line of best fit (blue
@@ -111,7 +109,7 @@ variables.
 | ----------: | --------: | ------: | --------: | ----------: | ----------: | :----------------------------------- | :---------- |
 | \-0.1648202 | \-7.07589 |       0 |      1793 | \-0.2094894 | \-0.1194644 | Pearson’s product-moment correlation | two.sided   |
 
-#### Limitations and future studies
+#### Limitations and future directions
 
 #### References
 
