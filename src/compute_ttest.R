@@ -1,13 +1,13 @@
 #! /usr/bin/env Rscript
-# compute_kendall.R
+# compute_ttest.R
 # Bailey Lei, George J. J. Wu, Nov 2018
 
-# This script loads a data file and outputs the Kendall's Tau correlation coefficient 
-# between chocolate darkness (cocoa percentage) and chocolate ratings. 
+# This script loads a data file and outputs the t-test statistics and its p-value
+# between the mean chocolate darkness (cocoa percentage) for each chocolate ratings group. 
 # This script takes two arguments - a path or filename by which to load the data, 
 # and another path or filename by which to save the results in a csv file.
 
-# Usage: Rscript compute_kendall.R ../data/cleaned_coco.csv ../results/cor_kendall.csv
+# Usage: Rscript compute_ttest.R ../data/cleaned_coco.csv ../results/ttest.csv
 
 # load libraries
 suppressPackageStartupMessages(library(tidyverse))
@@ -24,12 +24,19 @@ main <- function() {
   # load data
   suppressMessages(coco <- read_csv(input))
   
-  # Compute Kendall's Tau and save results
-  cor.test(coco$darkness, coco$rating, method="kendall") %>% 
-    tidy() %>% 
+  # categorize expert ratings to high and low
+  coco <- coco %>% 
+    mutate(rating_group = if_else(rating > 3, "high", "low"))
+  
+  # conduct t-test
+  results <- t.test(darkness ~ rating_group, data = coco, var.equal = FALSE) %>% 
+    tidy()
+  
+  # output part of the results
+  results[, 4:10] %>% 
     write_csv(output)
   
-  print("Kendall's correlation results successfully saved.")
+  print("t-test results successfully saved.")
   
 }
 

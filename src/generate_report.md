@@ -11,7 +11,7 @@ cocoa and are thus considered more light.
 
 This begs a question - are darker chocolate bars simply better? For
 instance, in the eyes of the experts, are chocolate bars with 99% cocoa
-concentration better than chocolate bars with only 79% cocoa
+concentration simply better than chocolate bars with only 70% cocoa
 concentration?
 
 This analysis would explore the relationship between chocolate darkness
@@ -89,9 +89,10 @@ slightly left-skewed.
 ### Chocolate darkness and expert ratings
 
 Let’s explore the relationship between chocolate darkness and expert
-ratings. We would first treat expert ratings as a continuous variable,
-followed by analysis in which it would also be treated as a categorical
-variable.
+ratings. Expert ratings is an ordinal variable with more than five
+categories. For this reason, we would first treat expert ratings simply
+as a continuous variable, followed by an analysis in which it would also
+be treated as a categorical variable.
 
 #### Expert ratings as a continuous variable
 
@@ -117,19 +118,98 @@ p-value
 | ----------: | --------: | ------: | --------: | ----------: | ----------: | :----------------------------------- | :---------- |
 | \-0.1648202 | \-7.07589 |       0 |      1793 | \-0.2094894 | \-0.1194644 | Pearson’s product-moment correlation | two.sided   |
 
-There was a negative correlation between the two variables (r = -0.1648,
-n = 1793, p \< 0.0001). Both `Figure 3.` and the results in `Table 3.`
-seemed to be suggesting that chocolate darkness is weakly and negatively
-associated with chocolate expert ratings. In other words, as the cocoa
-percentage of chocolate bars increases, chocolate experts tend to give
-somewhat lower ratings.
+There was a weak and negative correlation between the two variables (r =
+-.1648, n = 1793, p \< 0.0001). Both `Figure 3.` and the results in
+`Table 3.` seemed to be suggesting that chocolate darkness is weakly and
+negatively associated with chocolate expert ratings. In other words, as
+the cocoa percentage of chocolate bars increases, chocolate experts tend
+to give somewhat lower ratings.
 
-#### Ratings as a categorical variable
+#### Expert ratings as a categorical variable
+
+We would next treat chocolate expert ratings as a categorical variable.
+To simplify comparisons, this analysis further categorized chocolate
+bars with 3 or lower ratings as `low quality` chocolate (n = 790), and
+chocolate bars with greater than 3 ratings as `high quality` chocolate
+(n = 1005).
+
+We then compared the mean chocolate darkness (cocoa percentage) between
+the two expert ratings or quality groups.
+
+![](../results/mean_darkness_rating.jpg)<!-- -->
+
+*Figure 4.* Mean chocolate darkness (cocoa percentage) by expert ratings
+groups. Error bars represent 95% confidence intervals for each mean
+estimate.
+
+As suggested by `Figure 4.`, high quality chocolate bars seemed to have
+lower cocoa concentration. Let’s formally test this observation by
+conducting a [Welch’s
+t-test](https://en.wikipedia.org/wiki/Welch%27s_t-test). We chose to use
+a Welch’s t-test because the two chocolate quality groups differed in
+sample size, and we assumed that the variance of the two quality groups
+to be different.
+
+We would be testing the following null and alternative hypothesis:
+
+\(H_0\): The mean chocolate darkness (cocoa percentage) of the high
+quality chocolate is *no different* than that of the low quality
+chocolate.
+
+\(H_A\): The mean chocolate darkness (cocoa percentage) of the high
+quality chocolate is *different* than that of the low quality chocolate.
+
+*Table 4.* Welch’s t-test and its
+p-value
+
+|  statistic |  p.value | parameter |    conf.low |   conf.high | method                  | alternative |
+| ---------: | -------: | --------: | ----------: | ----------: | :---------------------- | :---------- |
+| \-4.075533 | 4.87e-05 |  1288.021 | \-0.0189668 | \-0.0066405 | Welch Two Sample t-test | two.sided   |
+
+As indiciated by `Table 4.`, there was enough evidence to reject the
+null hypothesis. There was a significant difference in the mean cocoa
+percentage for low quality (M = 0.7242, SD = 0.0765) chocolate bars and
+high quality (M = 0.711, SD = 0.0497) chocolate bars; t(1288) = -4.0755,
+p \< 0.0001. In other words, low quality chocolate bars on average tend
+to be more dark, comparing to high quality chocolate bars.
 
 ### Summary
 
+We observed that chocolate experts tend to give somewhat lower ratings
+as chocolate became more dark. We also observed that low quality
+chocolate tends to be more dark than high quality chocolate. Both
+observations suggest that darker chocolate bars are not necessarily
+better chocolate bars.
+
 ### Limitations and future directions
+
+There were a number of limitations with the current analysis.
+
+We have not yet considered the scenarios in which the relationship
+between chocolate darkness and ratings could be non-linear. For
+instance, maybe experts prefer chocolate that is not too dark, or not
+too light, but with just the right amount of cocoa. We can explore these
+scenarios in the future by computing [Kendall’s
+tau](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)
+correlation coefficient instead, or by fitting a smooth line over our
+scatter plot using
+[LOESS](https://en.wikipedia.org/wiki/Local_regression) instead.
+
+We also did not consider other factors that can influence the ratings of
+the chocolate bars, such as the origin and quality of the cocoa beans,
+as well as the company that produced the chocolate bars. We can explore
+the potential interactions among these variables in the future.
 
 ### References
 
-  - cocoa versus cacao
+[Chocolate bar
+ratings](https://www.kaggle.com/rtatman/chocolate-bar-ratings/home) by
+Rachael Tatman
+
+[Cacao vs Cocoa: The difference and why it
+matters](https://blog.paleohacks.com/cacao-vs-cocoa/#) by Corey
+Pemberton
+
+[Can Likert scale data ever be
+continuous?](https://www.theanalysisfactor.com/can-likert-scale-data-ever-be-continuous/)
+by Karen Grace-Martin

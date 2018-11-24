@@ -14,6 +14,7 @@ Rscript src/prepare_data.R data/flavors_of_cacao.csv data/cleaned_coco.csv
 Rscript src/visualize_darkness.R data/cleaned_coco.csv results/darkness_dist.jpg
 Rscript src/visualize_rating.R data/cleaned_coco.csv results/rating_dist.jpg
 Rscript src/visualize_scatter.R data/cleaned_coco.csv results/scatter_darkness_rating.jpg
+Rscript src/visualize_mean.R data/cleaned_coco.csv results/mean_darkness_rating.jpg
 
 # compute descriptive statistics
 Rscript src/describe_darkness.R data/cleaned_coco.csv results/darkness_stats.csv
@@ -21,6 +22,8 @@ Rscript src/describe_rating.R data/cleaned_coco.csv results/rating_stats.csv
 
 # compute correlation
 Rscript src/compute_pearson.R data/cleaned_coco.csv results/cor_pearson.csv
-Rscript src/compute_kendall.R data/cleaned_coco.csv results/cor_kendall.csv
+
+# conduct t-test
+Rscript src/compute_ttest.R data/cleaned_coco.csv results/ttest.csv
 
 # make report

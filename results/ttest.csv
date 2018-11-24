@@ -1,0 +1,2 @@
+statistic,p.value,parameter,conf.low,conf.high,method,alternative
+-4.075532737528516,4.8717305195880546e-5,1288.0206780534306,-0.018966828605368243,-0.006640451450050769,Welch Two Sample t-test,two.sided
