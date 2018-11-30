@@ -11,6 +11,8 @@
 
 # load libraries
 suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(testthat))
+
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
@@ -36,6 +38,12 @@ main <- function() {
   suppressMessages(ggsave(output, width = 5, height = 2.5))
   print("Distribution of chocolate ratings successfully saved.")
 
+  #Unit test
+  test_that('correct dimension', {
+    expect_equal(dim(coco)[1], 1795)
+    expect_equal(dim(coco)[2], 2)
+  })
+  
 }
 
 # call the main function

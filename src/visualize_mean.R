@@ -13,6 +13,8 @@
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(broom))
 suppressPackageStartupMessages(library(infer))
+suppressPackageStartupMessages(library(testthat))
+
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
@@ -73,6 +75,12 @@ main <- function() {
   suppressMessages(ggsave(output, width = 5, height = 3.5))
   print("Mean chocolate darkness by ratings group successfully saved.")
   
+  
+  #Unit test
+  test_that('correct dimension', {
+    expect_equal(dim(coco)[1], 1795)
+    expect_equal(dim(coco)[2], 3)
+  })
 }
 
 # call the main function
