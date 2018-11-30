@@ -12,6 +12,8 @@
 # load libraries
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(broom))
+suppressPackageStartupMessages(library(testthat))
+
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
@@ -26,12 +28,19 @@ main <- function() {
   
   # compute summary statistics of chocolate ratings
   # save it in a dataframe
-  coco$rating %>% 
-    summary() %>% 
-    tidy() %>% 
-    write_csv(output)
+  coco <- coco$rating %>% 
+            summary() %>% 
+            tidy() %>% 
+            write_csv(output)
   
   print("Descriptive stats for rating successfully saved.")
+  
+  #Unit test
+  test_that('correct values', {
+    expect_equal(coco[[1]], 1)
+    expect_equal(round(coco[[2]],2), 2.88)
+    expect_equal(round(coco[[3]],2), 3.25)
+  })
   
 }
 

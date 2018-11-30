@@ -12,6 +12,8 @@
 # load libraries
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(broom))
+suppressPackageStartupMessages(library(testthat))
+
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
@@ -26,13 +28,19 @@ main <- function() {
   
   # compute summary statistics of chocolate darkness
   # save it in a dataframe
-  coco$darkness %>% 
-    summary() %>% 
-    tidy() %>% 
-    write_csv(output)
+  coco <- coco$darkness %>% 
+            summary() %>% 
+            tidy() %>% 
+            write_csv(output)
 
   print("Descriptive stats for darkness successfully saved.")
   
+  #Unit test
+  test_that('correct values', {
+    expect_equal(coco[[1]], 0.42)
+    expect_equal(coco[[2]], 0.7)
+    expect_equal(coco[[3]], 0.7)
+  })
 }
 
 # call the main function
