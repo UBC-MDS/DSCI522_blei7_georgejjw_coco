@@ -32,8 +32,8 @@ main <- function() {
 
   print("Pearson's correlation results successfully saved.")
   
-  #Unit test
-  test_that('correct values', {
+  # unit test
+  test_that('Inconsistent results', {
     expect_equal(round(coco[[1]],3), -0.165)
     expect_equal(round(coco[[2]],2), -7.08)
   })

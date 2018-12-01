@@ -35,8 +35,8 @@ main <- function() {
   
   print("Descriptive stats for rating successfully saved.")
   
-  #Unit test
-  test_that('correct values', {
+  # unit test
+  test_that('Inconsistent results', {
     expect_equal(coco[[1]], 1)
     expect_equal(round(coco[[2]],2), 2.88)
     expect_equal(round(coco[[3]],2), 3.25)

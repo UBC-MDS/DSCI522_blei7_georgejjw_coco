@@ -35,8 +35,8 @@ main <- function() {
 
   print("Descriptive stats for darkness successfully saved.")
   
-  #Unit test
-  test_that('correct values', {
+  # unit test
+  test_that('Inconsistent results', {
     expect_equal(coco[[1]], 0.42)
     expect_equal(coco[[2]], 0.7)
     expect_equal(coco[[3]], 0.7)

@@ -24,25 +24,25 @@ main <- function() {
 
   # load data
   suppressMessages(coco <- read_csv(input))
+  
+  # unit test
+  test_that('Incorrect data dimensions', {
+    expect_equal(dim(coco)[1], 1795)
+    expect_equal(dim(coco)[2], 2)
+  })
 
   # visualize distribution of chocolate ratings
   coco %>% ggplot(aes(x = rating)) +
     geom_bar() +
     scale_x_continuous(breaks = seq(0, 5, by = 0.5)) +
-    xlab("Chocolate ratings") +
-    ylab("Frequency") +
+    xlab("Chocolate expert ratings") +
+    ylab("Number of chocolate bars") +
     theme_minimal() +
     theme(axis.title = element_text(size = 8))
   
   # save figure
   suppressMessages(ggsave(output, width = 5, height = 2.5))
   print("Distribution of chocolate ratings successfully saved.")
-
-  #Unit test
-  test_that('correct dimension', {
-    expect_equal(dim(coco)[1], 1795)
-    expect_equal(dim(coco)[2], 2)
-  })
   
 }
 

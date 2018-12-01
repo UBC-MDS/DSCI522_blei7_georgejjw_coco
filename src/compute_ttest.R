@@ -34,20 +34,19 @@ main <- function() {
   results <- t.test(darkness ~ rating_group, data = coco, var.equal = FALSE) %>% 
     tidy()
   
+  # unit test
+  test_that('Inconsistent results', {
+    expect_equal(round(results[[1]], 4), -0.0128)
+    expect_equal(round(results[[2]],3), 0.711)
+    expect_equal(round(results[[3]],2), 0.72)
+  })
+  
   # output part of the results
   results[, 4:10] %>% 
     write_csv(output)
   
   print("t-test results successfully saved.")
   
-  
-  #Unit test
-  test_that('correct values', {
-    expect_equal(round(results[[1]], 4), -0.0128)
-    expect_equal(round(results[[2]],3), 0.711)
-    expect_equal(round(results[[3]],2), 0.72)
-    
-  })
 }
 
 # call the main function
