@@ -49,8 +49,8 @@ Upon executing the above scripts, a final report for this analysis will be gener
 
 - R and R packages:
 
-  - tidyverse
-  - broom
-  - infer
-
-
+  - tidyverse (≥ 1.2.1)
+  - infer (≥ 0.4.0)
+  - knitr (≥ 1.17)
+  - rmarkdown (≥ 1.7.4)
+  - here (≥ 0.1)
