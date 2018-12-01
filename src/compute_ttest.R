@@ -12,6 +12,8 @@
 # load libraries
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(broom))
+suppressPackageStartupMessages(library(testthat))
+
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
@@ -38,6 +40,14 @@ main <- function() {
   
   print("t-test results successfully saved.")
   
+  
+  #Unit test
+  test_that('correct values', {
+    expect_equal(round(results[[1]], 4), -0.0128)
+    expect_equal(round(results[[2]],3), 0.711)
+    expect_equal(round(results[[3]],2), 0.72)
+    
+  })
 }
 
 # call the main function

@@ -11,6 +11,7 @@
 
 # load libraries
 suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(testthat))
 
 # read in command line arguments
 args <- commandArgs(trailingOnly = TRUE)
@@ -40,7 +41,12 @@ main <- function() {
   # save cleaned data
   coco %>% write_csv(output)
   print("Cleaned data successfully saved.")
-
+  
+  #Unit test
+  test_that('correct dimension', {
+    expect_equal(dim(coco)[1], 1795)
+    expect_equal(dim(coco)[2], 2)
+  })
 }
 
 # call the main function
