@@ -29,8 +29,8 @@ main <- function() {
   coco %>% ggplot(aes(x = rating)) +
     geom_bar() +
     scale_x_continuous(breaks = seq(0, 5, by = 0.5)) +
-    xlab("Chocolate ratings") +
-    ylab("Frequency") +
+    xlab("Chocolate expert ratings") +
+    ylab("Number of chocolate bars") +
     theme_minimal() +
     theme(axis.title = element_text(size = 8))
   

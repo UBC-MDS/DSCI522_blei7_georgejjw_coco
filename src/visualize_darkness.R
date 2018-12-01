@@ -29,7 +29,7 @@ main <- function() {
   coco %>% ggplot(aes(x = darkness)) +
     geom_histogram(bins = 40) +
     xlab("Chocolate darkness (cocoa percentage)") +
-    ylab("Frequency") +
+    ylab("Number of chocolate bars") +
     theme_minimal() +
     theme(axis.title = element_text(size = 8))
  
