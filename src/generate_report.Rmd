@@ -140,7 +140,9 @@ We observed that chocolate experts tend to give somewhat lower ratings as chocol
 
 There were a number of limitations with the current analysis.
 
-We have not yet considered the scenarios in which the relationship between chocolate darkness and ratings could be non-linear. For instance, maybe experts prefer chocolate that is not too dark, or not too light, but with just the right amount of cocoa.
+For instance, please note that most chocolate bars in our data set were relatively dark to begin with - around 70% dark. To capture a more comprehensive picture of the relationship between chocolate darkness and ratings, we can gather additional chocolate bar samples that are much less concentrated in future analyses.
+
+Furthermore, we have not yet considered the scenarios in which the relationship between chocolate darkness and ratings could be non-linear. For instance, maybe experts prefer chocolate that is not too dark, or not too light, but with just the right amount of cocoa.
 
 In future analyses, we can explore these scenarios in the future by computing [Kendall's tau](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient) correlation coefficient instead, or by fitting a smooth line over our scatter plot using [LOESS](https://en.wikipedia.org/wiki/Local_regression) instead.
 
