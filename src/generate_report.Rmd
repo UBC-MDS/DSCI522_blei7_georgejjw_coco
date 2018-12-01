@@ -150,10 +150,8 @@ We also did not consider other factors that can influence the ratings of the cho
 
 ### References
 
-[Chocolate bar ratings](https://www.kaggle.com/rtatman/chocolate-bar-ratings/home) by Rachael Tatman
+Tatman, R. (2017). Chocolate bar ratings. Retrieved from https://www.kaggle.com/rtatman/chocolate-bar-ratings/home 
 
-[Cacao vs Cocoa: The difference and why it matters](https://blog.paleohacks.com/cacao-vs-cocoa/#) by Corey Pemberton
+Pemberton, C. (2018). Cacao versus cocoa: Are you eating real chocolate? Retrieved from https://blog.paleohacks.com/cacao-vs-cocoa/# 
 
-[Can Likert scale data ever be continuous?](https://www.theanalysisfactor.com/can-likert-scale-data-ever-be-continuous/) by Karen Grace-Martin
-
-
+Grace-Martin, K. (2018). Can Likert scale data ever be continuous? Retrieved from https://www.theanalysisfactor.com/can-likert-scale-data-ever-be-continuous 
