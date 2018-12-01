@@ -6,7 +6,7 @@ Project URL: https://github.com/UBC-MDS/DSCI_522_blei7_georgejjw_coco
 
 Are darker chocolate simply better chocolate? This project explored the relationship between chocolate darkness (cocoa percentage) and chocolate expert ratings.
 
-This project observed a weak and negative Pearson correlation between chocolate darkness and expert ratings. Using a Welch's t-test, this project also observed that the mean chocolate darkness difference between low and high quality chocolate bars were almost trivial. There seemed to be no clear relationship between chocolate darkness and expert ratings. Limitations and future directions of this project were discussed.
+This project observed a weak and negative Pearson correlation between chocolate darkness and expert ratings. Using a Welch's t-test, this project also observed that the mean chocolate darkness difference between low and high quality chocolate bars was practically trivial. There seemed to be no clear relationship between chocolate darkness and expert ratings. Limitations and future directions of this project were discussed.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Chocolate_bar.png/800px-Chocolate_bar.png)
 
