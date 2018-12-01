@@ -38,15 +38,16 @@ main <- function() {
       rating = parse_number(Rating)) %>%
     select(darkness, rating)
 
+  # unit test
+  test_that('Incorrect data dimensions', {
+    expect_equal(dim(coco)[1], 1795)
+    expect_equal(dim(coco)[2], 2)
+  })
+  
   # save cleaned data
   coco %>% write_csv(output)
   print("Cleaned data successfully saved.")
   
-  #Unit test
-  test_that('correct dimension', {
-    expect_equal(dim(coco)[1], 1795)
-    expect_equal(dim(coco)[2], 2)
-  })
 }
 
 # call the main function

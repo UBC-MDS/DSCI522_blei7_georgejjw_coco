@@ -24,6 +24,12 @@ main <- function() {
 
   # load data
   suppressMessages(coco <- read_csv(input))
+  
+  # unit test
+  test_that('Incorrect data dimensions', {
+    expect_equal(dim(coco)[1], 1795)
+    expect_equal(dim(coco)[2], 2)
+  })
 
   # visualize distribution of chocolate ratings
   coco %>% ggplot(aes(x = rating)) +
@@ -37,12 +43,6 @@ main <- function() {
   # save figure
   suppressMessages(ggsave(output, width = 5, height = 2.5))
   print("Distribution of chocolate ratings successfully saved.")
-
-  #Unit test
-  test_that('correct dimension', {
-    expect_equal(dim(coco)[1], 1795)
-    expect_equal(dim(coco)[2], 2)
-  })
   
 }
 

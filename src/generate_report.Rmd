@@ -134,13 +134,13 @@ As indicated by `Table 4.`, there was enough evidence to reject the null hypothe
 
 ### Summary
 
-We observed that chocolate experts tend to give somewhat lower ratings as chocolate became more dark, although this tendency was very weak. We also observed that the mean chocolate darkness difference between low and high quality chocolate bars were almost trivial. Both observations suggest that darker chocolate bars are not necessarily better chocolate bars. There seems to be no clear relationship between chocolate darkness and expert ratings.
+We observed that chocolate experts tend to give somewhat lower ratings as chocolate becomes more dark, although this tendency is very weak. We also observed that the mean chocolate darkness difference between low and high quality chocolate bars was trivial. Both observations suggest that darker chocolate bars are not necessarily better chocolate bars. There seems to be no clear relationship between chocolate darkness and expert ratings.
 
 ### Limitations and future directions
 
 There were a number of limitations with the current analysis.
 
-For instance, please note that most chocolate bars in our data set were relatively dark to begin with - around 70% dark. To capture a more comprehensive picture of the relationship between chocolate darkness and ratings, we can gather additional chocolate bar samples that are much less concentrated in future analyses.
+For instance, note that most chocolate bars in our data set were already relatively dark - around 70% cocoa concentration. To capture a more comprehensive picture of the relationship between chocolate darkness and ratings, we can gather additional chocolate bar samples that are much less concentrated in future analyses.
 
 Furthermore, we have not yet considered the scenarios in which the relationship between chocolate darkness and ratings could be non-linear. For instance, maybe experts prefer chocolate that is not too dark, or not too light, but with just the right amount of cocoa.
 

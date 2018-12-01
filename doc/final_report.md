@@ -202,19 +202,19 @@ trivial - only about 1.2%.
 ### Summary
 
 We observed that chocolate experts tend to give somewhat lower ratings
-as chocolate became more dark, although this tendency was very weak. We
+as chocolate becomes more dark, although this tendency is very weak. We
 also observed that the mean chocolate darkness difference between low
-and high quality chocolate bars were almost trivial. Both observations
-suggest that darker chocolate bars are not necessarily better chocolate
-bars. There seems to be no clear relationship between chocolate darkness
-and expert ratings.
+and high quality chocolate bars was trivial. Both observations suggest
+that darker chocolate bars are not necessarily better chocolate bars.
+There seems to be no clear relationship between chocolate darkness and
+expert ratings.
 
 ### Limitations and future directions
 
 There were a number of limitations with the current analysis.
 
-For instance, please note that most chocolate bars in our data set were
-relatively dark to begin with - around 70% dark. To capture a more
+For instance, note that most chocolate bars in our data set were already
+relatively dark - around 70% cocoa concentration. To capture a more
 comprehensive picture of the relationship between chocolate darkness and
 ratings, we can gather additional chocolate bar samples that are much
 less concentrated in future analyses.

@@ -27,6 +27,12 @@ main <- function() {
   # load data
   suppressMessages(coco <- read_csv(input))
   
+  # unit test
+  test_that('Incorrect data dimensions', {
+    expect_equal(dim(coco)[1], 1795)
+    expect_equal(dim(coco)[2], 2)
+  })
+  
   # categorize expert ratings to high and low
   coco <- coco %>% 
     mutate(rating_group = if_else(rating > 3, "high", "low"))
@@ -75,12 +81,6 @@ main <- function() {
   suppressMessages(ggsave(output, width = 5, height = 3.5))
   print("Mean chocolate darkness by ratings group successfully saved.")
   
-  
-  #Unit test
-  test_that('correct dimension', {
-    expect_equal(dim(coco)[1], 1795)
-    expect_equal(dim(coco)[2], 3)
-  })
 }
 
 # call the main function

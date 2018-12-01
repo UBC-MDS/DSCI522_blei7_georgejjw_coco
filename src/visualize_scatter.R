@@ -25,6 +25,12 @@ main <- function() {
   # load data
   suppressMessages(coco <- read_csv(input))
   
+  # unit test
+  test_that('Incorrect data dimensions', {
+    expect_equal(dim(coco)[1], 1795)
+    expect_equal(dim(coco)[2], 2)
+  })
+  
   # visualize scatter plot between darkness and rating
   coco %>% ggplot(aes(y = rating, x = darkness)) +
     geom_point(size = 0.8) +
@@ -38,11 +44,6 @@ main <- function() {
   suppressMessages(ggsave(output, width = 5, height = 3.5))
   print("Scatterplot of darkness and ratings successfully saved.")
   
-  #Unit test
-  test_that('correct dimension', {
-    expect_equal(dim(coco)[1], 1795)
-    expect_equal(dim(coco)[2], 2)
-  })
 }
 
 # call the main function
