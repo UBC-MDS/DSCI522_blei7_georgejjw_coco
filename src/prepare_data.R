@@ -28,7 +28,7 @@ main <- function() {
   names(coco) <- gsub("[[:space:]]+", "_", names(coco))
 
   # subset data
-  coco <- coco %>% # remove first row due to duplicated column names
+  coco <- coco %>%
     select(Cocoa_Percent, Rating)
 
   # correct data type
