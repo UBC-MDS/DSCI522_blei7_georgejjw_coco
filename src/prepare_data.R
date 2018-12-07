@@ -28,14 +28,14 @@ main <- function() {
   names(coco) <- gsub("[[:space:]]+", "_", names(coco))
 
   # subset data
-  coco <- coco[-1, ] %>% # remove first row due to duplicated column names
+  coco <- coco %>%
     select(Cocoa_Percent, Rating)
 
   # correct data type
   coco <- coco %>%
     mutate(
       darkness = parse_number(Cocoa_Percent) / 100,
-      rating = parse_number(Rating)) %>%
+      rating = Rating) %>%
     select(darkness, rating)
 
   # unit test
@@ -43,11 +43,11 @@ main <- function() {
     expect_equal(dim(coco)[1], 1795)
     expect_equal(dim(coco)[2], 2)
   })
-  
+
   # save cleaned data
   coco %>% write_csv(output)
   print("Cleaned data successfully saved.")
-  
+
 }
 
 # call the main function
