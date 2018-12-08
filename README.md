@@ -131,7 +131,7 @@ Here is a brief description of each script.
 
 Here is a flowchart depicting the relationships among the scripts.
 
-![](results/Makefile.png)
+![](https://i.imgur.com/7Kmpy1U.jpg)
 
 Upon executing the above scripts, a final report for this analysis will be generated inside the `doc` folder under the filename `final_report.md` and `final_report.html`.
 
