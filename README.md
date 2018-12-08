@@ -18,7 +18,31 @@ For a detailed description of the data set, please see [Kaggle](https://www.kagg
 
 ### To Run this analysis
 
-Clone and navigate to the root of this project, execute the following command:
+#### Using Docker
+
+1. Install and configure [Docker](https://docs.docker.com/get-started/).
+
+2. Clone/download this repository, navigate to the root of this project, and execute the following command in your terminal (replace PATH_TO_THIS_REPO_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer):
+
+```
+docker run --rm -v PATH_TO_THIS_REPO_ON_YOUR_COMPUTER:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" clean
+```
+
+This will reset the project to its initial state.
+
+Note also that the above command will also download a Docker image of about 698mb in size to your computer.
+
+Proceed to running the data analysis with the following terminal command:
+
+```
+docker run --rm -v PATH_TO_THIS_REPO_ON_YOUR_COMPUTER:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" all
+```
+
+A final report will be compiled at `doc/final_report.md` and `doc/final_report.html`.
+
+#### Using GNU Make
+
+If you don't want to have `Docker` installed, you can also run this analysis by executing the following terminal command at the root of this project:
 
 ```
 make all
@@ -28,19 +52,21 @@ The `make all` command will automatically generate all relevant data files and f
 
 A final report will be compiled at `doc/final_report.md` and `doc/final_report.html`.
 
-If you want to reset the state of this project, you can execute the following command:
+If you want to reset the state of this project, you can simply execute the following command:
 
 ```
 make clean
 ```
 
-If you don't have `Make` installed, you can also run the analysis by executing this shell script at the root of this project:
+#### Using shell script
+
+If you don't have `Docker` or `Make` installed, you can also run this analysis by executing the following shell script in your terminal at the root of this project:
 
 ```
 bash run_all.sh
 ```
 
-As a third option, you can also execute the following commands in your terminal, at the root of this project:
+The shell script will execute the following commands.
 
 ```
 # prepare data
@@ -77,13 +103,13 @@ Rscript -e 'rmarkdown::render("src/generate_report.Rmd", output_file = "final_re
 | compute_ttest.R | Conducts t-test comparing mean chocolate darkness between rating groups |
 | generate_report.Rmd | Compiles final report into markdown file |
 
-Here is a flowchart depicting the relationships among the scripts.
+<!-- Here is a flowchart depicting the relationships among the scripts. -->
 
-![](https://i.imgur.com/7Kmpy1U.jpg)
+![]()
 
 ### Report
 
-Upon executing the above scripts, a final report for this analysis will be generated inside the `doc` folder under the filename `final_report.md`.
+Upon executing the above scripts, a final report for this analysis will be generated inside the `doc` folder under the filename `final_report.md` and `final_report.html`.
 
 ### Dependencies
 
