@@ -24,11 +24,11 @@ For a detailed description of the data set, please see [Kaggle](https://www.kagg
 
 2. Install the docker image for this project by using the terminal command:
 
-> Please note that this docker image is about 698mb in size.
-
 ```
 docker pull wuj4979/mds-coco-analysis
 ```
+
+> Please note that this docker image is about 698mb in size.
 
 3. Clone/download this repository, and navigate to the root of this project.
 
