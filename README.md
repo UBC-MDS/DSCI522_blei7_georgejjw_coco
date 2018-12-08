@@ -29,10 +29,10 @@ For a detailed description of the data set, please see [Kaggle](https://www.kagg
 docker pull wuj4979/mds-coco-analysis
 ```
 
-3. Clone or download this repository.
+3. Clone/download this repository, and navigate to the root of this project.
 
-4. Navigate to the root of this project, reset the project to its initial state by executing the following command in your terminal:
-    - Replace PATH_TO_THIS_REPO_ON with the absolute path to the root of this project on your computer.
+4. Reset the project to its initial state by executing the terminal command:
+    - Replace PATH_TO_THIS_REPO with the absolute path to the root of this project on your computer.
     - For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
 
 ```
@@ -51,8 +51,18 @@ A final report will be compiled at `doc/final_report.md` and `doc/final_report.h
 
 #### Using GNU Make
 
-If you don't have `Docker` installed, you can also run this analysis by executing the following terminal command at the root of this project:
-    - Please make sure to have all the dependencies for this project installed before executing the make commands.
+If you don't have `Docker` installed, you can also run this analysis by using GNU Make as follows.
+
+1. Clone/download this repository, and navigate to the root of this project.
+
+2. Reset the project to its initial state by executing the terminal command:
+
+```
+make clean
+```
+
+3. Run the data analysis by executing the terminal command:
+    - Please make sure to have all the dependencies for this project installed before executing this command.
 
 ```
 make all
@@ -62,15 +72,13 @@ The `make all` command will automatically generate all relevant data files and f
 
 A final report will be compiled at `doc/final_report.md` and `doc/final_report.html`.
 
-If you want to reset the state of this project, you can simply execute the following command:
-
-```
-make clean
-```
-
 #### Using shell script
 
-If you don't have `Docker` or `Make` installed, you can also run this analysis by executing the following shell script in your terminal at the root of this project:
+If you don't have `Docker` or `Make` installed, you can also run this analysis by using a shell script.
+
+1. Clone/download this repository, and navigate to the root of this project.
+
+2. Run the analysis by executing the terminal command:
     - Please make sure to have all the dependencies for this project installed before executing the shell script.
 
 ```
