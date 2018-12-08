@@ -22,7 +22,9 @@ For a detailed description of the data set, please see [Kaggle](https://www.kagg
 
 1. Install and configure [Docker](https://docs.docker.com/get-started/).
 
-2. Install the docker image for this project by using the terminal command (please note that this docker image is about 698mb in size):
+2. Install the docker image for this project by using the terminal command:
+
+- * Please note that this docker image is about 698mb in size.
 
 ```
 docker pull wuj4979/mds-coco-analysis
@@ -30,8 +32,8 @@ docker pull wuj4979/mds-coco-analysis
 
 3. Clone/download this repository, navigate to the root of this project, reset the project to its initial state by executing the following command in your terminal:
 
-> - Replace PATH_TO_THIS_REPO_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer.
-> - For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
+- * Replace PATH_TO_THIS_REPO_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer.
+- * For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
 
 ```
 docker run --rm -v PATH_TO_THIS_REPO_ON_YOUR_COMPUTER:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" clean
@@ -39,8 +41,8 @@ docker run --rm -v PATH_TO_THIS_REPO_ON_YOUR_COMPUTER:/home/DSCI_522_blei7_georg
 
 4. Run the data analysis with the following terminal command:
 
-> - Replace PATH_TO_THIS_REPO_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer.
-> - For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
+- * Replace PATH_TO_THIS_REPO_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer.
+- * For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
 
 ```
 docker run --rm -v PATH_TO_THIS_REPO_ON_YOUR_COMPUTER:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" all
@@ -52,7 +54,7 @@ A final report will be compiled at `doc/final_report.md` and `doc/final_report.h
 
 If you don't have `Docker` installed, you can also run this analysis by executing the following terminal command at the root of this project:
 
-> - Please make sure to have all the dependencies for this project installed before executing the make commands.
+- * Please make sure to have all the dependencies for this project installed before executing the make commands.
 
 ```
 make all
@@ -72,7 +74,7 @@ make clean
 
 If you don't have `Docker` or `Make` installed, you can also run this analysis by executing the following shell script in your terminal at the root of this project:
 
-> - Please make sure to have all the dependencies for this project installed before executing the shell script.
+- * Please make sure to have all the dependencies for this project installed before executing the shell script.
 
 ```
 bash run_all.sh
@@ -130,6 +132,7 @@ Upon executing the above scripts, a final report for this analysis will be gener
 - R packages:
 
   - tidyverse (≥ 1.2.1)
+  - readr (≥ 1.2.0)
   - infer (≥ 0.4.0)
   - knitr (≥ 1.17)
   - rmarkdown (≥ 1.7.4)
