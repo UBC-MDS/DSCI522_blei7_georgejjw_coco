@@ -29,20 +29,22 @@ For a detailed description of the data set, please see [Kaggle](https://www.kagg
 docker pull wuj4979/mds-coco-analysis
 ```
 
-3. Clone/download this repository, navigate to the root of this project, reset the project to its initial state by executing the following command in your terminal:
-    - Replace PATH_TO_THIS_REPO_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer.
+3. Clone or download this repository.
+
+4. Navigate to the root of this project, reset the project to its initial state by executing the following command in your terminal:
+    - Replace PATH_TO_THIS_REPO_ON with the absolute path to the root of this project on your computer.
     - For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
 
 ```
-docker run --rm -v PATH_TO_THIS_REPO_ON_YOUR_COMPUTER:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" clean
+docker run --rm -v PATH_TO_THIS_REPO:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" clean
 ```
 
-4. Run the data analysis with the following terminal command:
-    - Replace PATH_TO_THIS_REPO_ON_YOUR_COMPUTER with the absolute path to the root of this project on your computer.
+5. Run the data analysis with the following terminal command:
+    - Replace PATH_TO_THIS_REPO with the absolute path to the root of this project on your computer.
     - For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
 
 ```
-docker run --rm -v PATH_TO_THIS_REPO_ON_YOUR_COMPUTER:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" all
+docker run --rm -v PATH_TO_THIS_REPO:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" all
 ```
 
 A final report will be compiled at `doc/final_report.md` and `doc/final_report.html`.
