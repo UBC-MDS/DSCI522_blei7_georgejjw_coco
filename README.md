@@ -23,7 +23,8 @@ For a detailed description of the data set, please see [Kaggle](https://www.kagg
 1. Install and configure [Docker](https://docs.docker.com/get-started/).
 
 2. Install the docker image for this project by using the terminal command:
-    - Please note that this docker image is about 698mb in size.
+
+> Please note that this docker image is about 698mb in size.
 
 ```
 docker pull wuj4979/mds-coco-analysis
@@ -32,16 +33,20 @@ docker pull wuj4979/mds-coco-analysis
 3. Clone/download this repository, and navigate to the root of this project.
 
 4. Reset the project to its initial state by executing the terminal command:
-    - Replace PATH_TO_THIS_REPO with the absolute path to the root of this project on your computer.
-    - For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
+
+> Replace PATH_TO_THIS_REPO with the absolute path to the root of this project on your computer.
+
+> For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
 
 ```
 docker run --rm -v PATH_TO_THIS_REPO:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" clean
 ```
 
 5. Run the data analysis with the following terminal command:
-    - Replace PATH_TO_THIS_REPO with the absolute path to the root of this project on your computer.
-    - For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
+
+> Replace PATH_TO_THIS_REPO with the absolute path to the root of this project on your computer.
+
+> For Windows users, please use CMD or PowerShell to execute the command, and use Windows style path such as `//C/Users/blei/Downloads/DSCI_522_blei7_georgejjw_coco`.
 
 ```
 docker run --rm -v PATH_TO_THIS_REPO:/home/DSCI_522_blei7_georgejjw_coco wuj4979/mds-coco-analysis make -C "home/DSCI_522_blei7_georgejjw_coco" all
@@ -62,7 +67,8 @@ make clean
 ```
 
 3. Run the data analysis by executing the terminal command:
-    - Please make sure to have all the dependencies for this project installed before executing this command.
+
+> Please make sure to have all the dependencies for this project installed before executing this command.
 
 ```
 make all
@@ -79,7 +85,8 @@ If you don't have `Docker` or `Make` installed, you can also run this analysis b
 1. Clone/download this repository, and navigate to the root of this project.
 
 2. Run the analysis by executing the terminal command:
-    - Please make sure to have all the dependencies for this project installed before executing the shell script.
+
+> Please make sure to have all the dependencies for this project installed before executing the shell script.
 
 ```
 bash run_all.sh
