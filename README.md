@@ -129,9 +129,9 @@ Here is a brief description of each script.
 | compute_ttest.R | Conducts t-test comparing mean chocolate darkness between rating groups |
 | generate_report.Rmd | Compiles final report into markdown file |
 
-<!-- Here is a flowchart depicting the relationships among the scripts. -->
+Here is a flowchart depicting the relationships among the scripts.
 
-![]()
+![](results/Makefile.png)
 
 Upon executing the above scripts, a final report for this analysis will be generated inside the `doc` folder under the filename `final_report.md` and `final_report.html`.
 
